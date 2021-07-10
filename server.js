@@ -24,12 +24,9 @@ app.use("/booking", booking);
 app.use("/user", user);
 app.use("/message", message);
 
-
-
-
-// ROutes
+// Routes
 app.get("/", (req, res) => {
-  res.sendFile("hello from Back here");
+  res.send("hello from Back here");
 });
 
 const PORT = process.env.PORT || 5000;
