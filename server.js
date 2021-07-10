@@ -24,11 +24,13 @@ app.use("/booking", booking);
 app.use("/user", user);
 app.use("/message", message);
 
-if (process.env.NODE_ENV === "production") {
-  app.get("*", (req, res) => {
-    res.sendFile("hello from Back here");
-  });
-}
+
+
+
+// ROutes
+app.get("/", (req, res) => {
+  res.sendFile("hello from Back here");
+});
 
 const PORT = process.env.PORT || 5000;
 
